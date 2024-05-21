@@ -1,7 +1,7 @@
 # StarBucks Clone Practicing
 ## Reference:
-###Homepage
+### Homepage
 https://www.starbucks.com.tw/home/index.jspx
 
-###SVG 
+### 星里程SVG 
 https://www.starbucks.com.tw/rewards/catalog.jspx
