@@ -1,0 +1,767 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Noto Sans Traditional Chinese',sans-serif;
+
+}
+
+
+
+/*menu*/
+
+
+header {
+  z-index: 999999;
+  max-width: 100vw;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  background-color: #f7f7f7;
+  border-top: 10px solid #2C6044;
+  border-bottom: 5px solid #ddd;
+}
+
+header .logo img {
+  width: 5rem;
+}
+header .logo {
+  margin: 0.5rem;
+}
+header nav ul li {
+  display: inline-block;
+}
+
+
+nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+nav ul {
+  margin-left: 3rem;
+  padding-bottom: 1rem;
+}
+
+/*sub_menu*/
+.sub_menu {
+  z-index: 100;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  display: none;
+  position: relative;
+}
+.sub_menu .menu_content_container {
+  width: 100vw;
+  background-color: #1e1e1e;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+}
+.sub_menu .menu_content_container .menu_content {
+  margin: 2.5rem;
+}
+.sub_menu .menu_content_container .menu_content ul li {
+  list-style: none;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+.sub_menu .menu_content_container .menu_content ul h3 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.sub_menu .menu_content_container .menu_content ul li a {
+  text-decoration: none;
+  color: #bcbcbc;
+}
+.sub_menu .menu_content_container .menu_content ul li:first-child {
+  font-weight: 700;
+}
+
+
+/*banner*/
+
+.brownPic{
+  width: 100%;
+  padding: 2rem 4rem 3rem 4rem;
+}
+
+
+/*輪播*/
+#slider-container {
+  overflow: hidden;
+  position: relative;
+    width: 100%;
+    background: #F0F0F0;
+    padding: 32px 0;
+    box-shadow: 0 -3px 6px #00000029 inset,0 3px 6px #00000029 inset;
+    margin-bottom: 80px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 4s ease-in-out;
+}
+
+.slide {
+  width: 700px;
+  height:350px;
+  flex-shrink: 1;
+}
+
+.fade {
+  opacity: 0.5;
+}
+
+
+/* dots的樣式 */
+.dots {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* dots中的dot的樣式 */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #71B43A;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  transition: all 1s ease;
+}
+
+/* 當dot為active時，設置不同的樣式 */
+.dot.active {
+  width: 33px;
+  height: 15px;
+  border-radius: 100px;
+}
+
+
+
+/* Fading animation */
+ .fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}  
+
+
+
+  .slide_box .slick-arrow:before {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: solid 1px #4a4a4a;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;  
+}
+
+
+.slide_box .slick-arrow.slick-next:before {
+    transform: rotate(45deg) translate(-70%, -12%);
+}
+.slide_box .slick-arrow {
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    font-size: 0;
+    width: 12px;
+    height: 12px;
+    border: solid 2px #4a4a4a;
+    background: transparent;
+    transition: all .7s ease;
+}
+
+/*banner ends*/
+
+
+/*sub_menu end*/
+
+
+/*top right links*/
+header .utility_list ul {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1rem;
+}
+header .utility_list ul li {
+  display: inline-block;
+}
+header .utility_list ul li {
+  margin: 0 1rem;
+}
+header .utility_list ul li:nth-child(1)::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: bottom;
+  background: url("https://www.starbucks.com.tw/objects/images/header_utility_list.svg");
+  background-position: 100% 0;
+  background-size: 400%;
+}
+header .utility_list ul li:nth-child(2)::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: bottom;
+  background: url("https://www.starbucks.com.tw/objects/images/header_utility_list.svg");
+  background-position: 35% 100%;
+  background-size: 400%;
+}
+header .utility_list ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+}
+header .utility_list ul li {
+  list-style: none;
+}
+
+/*top right links end*/
+
+/*menu end*/
+  
+
+
+
+/*SVG*/
+.svgRewards{
+  width: 100%;
+  height: 800px;
+  background-color: #F5F3F0;
+  padding-top: 2rem;
+}
+
+.animated-rightrect {
+  animation-duration: .1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-name: slideInRight;
+  width:550px;
+  height:60px;
+  fill:#2C6044;
+}
+.animated-left-rect {
+  animation-duration: .1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-name: slideInLeft;
+  width:700px;
+  height:60px;
+  fill: #2C6044;
+  z-index: 1;
+
+}
+
+
+
+.animated-left-rect2 {
+  animation-duration: .1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-name: slideInLeft;
+  width:700px;
+  height:60px;
+  fill:#CAA259;
+
+
+}
+
+
+
+  .animated-grennBtext{
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  font-size: 26px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  fill:white;
+  animation-name: textSlideInLeft;
+}
+
+.animated-rightgrennBtext{
+  animation-duration: .5s;
+  animation-name: textSlideInRight;
+  fill:white;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  font-size: 26px;
+  font-weight: 600;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+    .animated-brownBtext{
+      
+  animation-duration: .65s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  font-size: 26px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+ animation-name: textSlideInLeft;
+ fill:white;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+ @keyframes textSlideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight{
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+  
+@keyframes textSlideInRight {
+from {
+  transform: translateX(100%);
+}
+to {
+  transform: translateX(0%);
+}
+}
+
+
+
+ .cup{
+width: 330px;
+height: 270px;
+position:absolute;
+top: 59%; 
+left: 50%;
+transform: translate(-50%, -50%); 
+animation: shake 1s ease-in; 
+
+} 
+@keyframes shake {
+  0% {
+    transform: translate(-50%, -50%) translateX(-5px) translateY(-5px) rotate(-1deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateX(-30px) translateY(-30px) rotate(-2deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateX(0) translateY(0) rotate(0);
+  }
+}
+.hand{
+  animation: shakeHand 1s  ease-in-out;
+  transform: translate(200px, -5px);
+}
+
+@keyframes shakeHand {
+  0% {
+    transform: translate(200px, -5px)  translateX(0px) (0deg);
+  }
+  50% {
+    transform: translate(200px, -5px) translateX(-10px) rotate(4deg);
+  }
+  100% {
+    transform: translate(200px, -5px) translateX(0px)  rotate(0);
+  }
+}
+
+.starRewardsText{
+  position:absolute;
+top: 62%; 
+left: 65%;
+transform: translate(-50%, -50%); 
+
+}
+
+
+.star{
+  animation-duration: 1.5s;
+  fill:#CAA259;
+  width:36px;
+  height:31px;
+  opacity: 0; /* 設置初始不可見 */
+  animation: fadeIn 0.5s forwards;
+  animation-delay: 0.5s;
+}
+
+
+  /* stars */
+   /* @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }  */
+  
+  @keyframes showPath {
+    from {
+      opacity: 0; /* Initial state: transparent */
+    }
+    to {
+      opacity: 1; /* End state: fully visible */
+    }
+  }
+  
+  .my-path {
+    opacity: 0; /* Hide the paths initially */
+    z-index: 2;
+  }
+  
+  /* Apply animation to each path */
+  .my-path-parent:nth-child(2) .my-path {
+    animation: showPath 1.5s ease-in-out 0.1s forwards; /* Start from 0.1 seconds, last for 1 second */
+  }
+  
+  .my-path-parent:nth-child(3) .my-path {
+    animation: showPath 1.5s ease-in-out 0.5s forwards; /* Start from 0.2 seconds, last for 1 second */
+  }
+  .my-path-parent:nth-child(4) .my-path {
+    animation: showPath 1.5s ease-in-out 0.8s forwards; /* Start from 0.2 seconds, last for 1 second */
+  }
+  .my-path-parent:nth-child(5) .my-path {
+    animation: showPath 1.5s ease-in-out 1s forwards; /* Start from 0.2 seconds, last for 1 second */
+  }
+  .my-path-parent:nth-child(6) .my-path {
+    animation: showPath 1.5s ease-in-out 1.2s forwards; /* Start from 0.2 seconds, last for 1 second */
+  }
+  .my-path-parent:nth-child(7) .my-path {
+    animation: showPath 1.5s ease-in-out 1.6s forwards; /* Start from 0.2 seconds, last for 1 second */
+  }
+  .my-path-parent:nth-child(8) .my-path {
+    animation: showPath 1.5s ease-in-out 1.4s forwards; /* Start from 0.2 seconds, last for 1 second */
+  }
+  
+/*blinks*/
+
+
+@keyframes blinkAndDisappear {
+  0% {
+    opacity: 1; 
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; 
+  }
+}
+
+.blinks path {
+  opacity: 0; 
+  animation: blinkAndDisappear 1s ease-in-out; /* Blink and disappear animation */
+}
+
+/*blinks end*/
+/*SVG END*/
+
+.boxes{
+  display: flex;
+  background-color: #2C6044;
+  width: 700px;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  position: absolute;
+  top:90%;
+  left: 25%;
+  justify-content: center;
+align-items: center;
+border: 1px solid white;
+}
+
+.boxes ul{
+  display: flex;
+  flex-direction: row;
+  gap:1.5rem;
+  
+
+}
+.boxes ul li {
+  list-style: none;
+
+
+}
+
+/*footer*/
+/* footer */
+footer {
+  background-color: #f0f0f0;
+  padding-bottom: 1rem;
+}
+footer .footer_top {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 1rem 0 1rem 5rem;
+  border-bottom: 3px solid #ffffff;
+}
+footer .footer_top .facebook::before {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: url(https://www.starbucks.com.tw/objects/images/social-icons.png);
+  background-position: 0% 0%;
+  background-size: 100%;
+  margin-right: -0.7rem;
+}
+footer .footer_top .instagram::before {
+  width: 2.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: url(https://www.starbucks.com.tw/objects/images/social-icons.png);
+  background-position: 0% 50%;
+  background-size: 100%;
+}
+footer .footer_top .youtube::before {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: url(https://www.starbucks.com.tw/objects/images/social-icons.png);
+  background-position: 0% 100%;
+  background-size: 100%;
+}
+footer .footer_top a {
+  margin: auto 0;
+}
+footer .footer_top .line i {
+  font-size: 3rem;
+  color: #000000;
+}
+footer .footer_main a {
+  text-decoration: none;
+  color: #000000;
+}
+footer .footer_main {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  background: url(https://www.starbucks.com.tw/objects/images/wordmark_footer.png);
+  background-repeat: no-repeat;
+  background-position: 95% 15%;
+}
+footer .footer_main .ul_wrap:last-child ul:last-child li:last-child a {
+  color: #6a8a55;
+}
+footer .footer_main .ul_wrap .fa-angle-down {
+  display: none;
+}
+footer .footer_main .ul_wrap {
+  margin: 1rem 3rem;
+}
+footer .footer_main .ul_wrap h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+footer .footer_main li {
+  list-style: none;
+  line-height: 2;
+}
+footer .footer_bottom {
+  max-width: 1320px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+footer .footer_bottom div {
+  width: 90vw;
+  margin: auto;
+}
+footer .footer_bottom div p {
+  display: inline;
+}
+footer .footer_bottom div a {
+  text-decoration: none;
+  color: #000000;
+}
+footer .footer_bottom div a::after {
+  content: "│";
+  font-weight: 600;
+  margin: auto 0.5rem;
+}
+footer .footer_bottom .rights {
+  width: 90vw;
+  margin: 0.5rem auto 0 auto;
+}
+
+
+/*footer end*/
+
+
+
+
+
+.svgNextArrow{
+  transform: translate(1000px, 430px);
+}
+.svgPrevArrow{
+  transform: translate(70px, 430px);
+}
+
+
+
+
+.banner_starRewards {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  
+
+  /*recommdation*/
+.product_slide_box {
+  width: 100%;
+  margin: 0 auto;
+    max-width: 1104px;
+    position: relative;    
+}
+
+
+
+.slide_box {
+  display: flex;
+  justify-content: center;
+gap: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  
+}
+h2 {
+  text-align: center;
+  color: #0E382C;
+  padding: 1rem;
+  margin: 1rem;
+}
+.product_slide_box a {
+  text-decoration: none;
+  color: #111;
+  font-size: 12px;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.more {
+  width: 100px;
+  margin-left: 1000px;
+  margin-top: 1rem;
+}
+.more .btn {
+  border: solid 1px;
+  padding: .3em .8em .3em;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 2em;
+}
+
+
+/*storeLocator*/
+.store_lists {
+  display: flex;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%);
+    flex-grow: 0;
+    order: 1;
+    overflow-y: auto;
+}
+
+#store-list {
+  width: 30%;
+  padding: 10px;
+}
+
+#map {
+  flex: 1;
+  height: 400px;
+}
+
+.store_name {
+  margin-top: 20px;
+}
+
+.store-item {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.store-item:hover {
+  background-color: #f0f0f0;
+}
+
+#store-list ul li{
+list-style: none;
+}
+.searchBar {
+  margin: .75rem;
+}
+
+.searchBar  input{
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+    border: solid 1px #ACACAC;
+    border-radius: 4px;
+    outline: 0;
+    padding: 0.8em .9em;
+    transition: all .6s;
+}
+
+.searchBar .filter{
+  text-decoration: none;
+  color: green;
+  border: 1px solid green;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+
+/*sotreLocator end*/
+
+
+
+
+/*search bar*/
+.search_bar  input {
+  border: solid 1px #ACACAC;
+  border-radius: 4px;
+  outline: 0;
+  padding: 0.8em .9em;
+  width: 100%;
+  transition: all .6s;
+}
